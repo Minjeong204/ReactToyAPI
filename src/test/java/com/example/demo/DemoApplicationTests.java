@@ -20,8 +20,10 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-		List<User> users = userService.table();
+		List<User> users = userRepository.findAll();
+		users.set(0, null);
 
+		
 	}
 
 }
